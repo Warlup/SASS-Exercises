@@ -1,0 +1,53 @@
+$primary-color: blue;
+$secondary-color: red;
+$third-color: green;
+$fs: 20px;
+
+@mixin article-card ($color, $border-color, $font-size) {
+    color: $color;
+    border: 1px $border-color solid;
+    font-size: $font-size;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 10px;
+    padding: 10px;
+    border: 1px solid $secondary-color;
+    gap: 1rem;
+    h1 {
+        color: $third-color;
+        text-decoration: underline 1px $primary-color;
+    }
+    section {
+        display: flex;
+        text-align: center;
+        article{
+            @include article-card($third-color, $primary-color, unset);
+            p{
+                font-size: 22px;
+                margin-right: 5px;
+                margin-left: 5px;
+                padding: 4px;
+            }
+            &:nth-child(odd){
+                color: $primary-color;
+            }
+            &:nth-child(even){
+                color: $secondary-color;
+                }
+        }
+        &:last-child{
+            article{
+                border: 1px solid $primary-color;
+                width: 100%;
+                p{
+                    color: $third-color;
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+}

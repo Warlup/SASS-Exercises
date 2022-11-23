@@ -1,0 +1,96 @@
+@use "sass:color";
+
+@function pxToRem ($size) {
+    $square-size: ($size / 16) + rem;
+    @return $square-size;
+}
+
+@for $index from 1 through 4 {
+    .fs-#{$index}rem {
+        font-size: $index + rem;
+    }
+}
+
+$primary-color: blue;
+$secondary-color: red;
+$third-color: green;
+
+.container{
+    border: 1px solid $secondary-color;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-bottom: 20px;
+    gap:1rem;
+    h1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $third-color;
+        text-decoration: 1px underline $primary-color;
+        }
+    h2 {
+        @extend h1;
+        align-self: center;
+        text-decoration: none;
+        border: 1px solid red;
+        width: fit-content;
+        padding: 10px;
+    
+        }
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        article{
+            border: 1px solid green;
+            p{
+                display: flex;
+                text-align: center;
+                font-size: 1rem;
+            }
+            &:nth-child(odd){
+                p{
+                    color: blue;
+                }
+            }
+            &:nth-child(even){
+                p{
+                    color: red;
+                }
+            }
+        }
+        &:last-child{
+            article{
+                border: 1px solid blue;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                p{
+                    color: green;
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+    &:nth-child(1){
+        div {
+            width: pxToRem(45);
+            height: pxToRem(45);
+            border: 1px red solid;
+            @for $var from 1 through 20 {
+                $color: black;
+                $color: color.adjust($color, $lightness: +5% * $var);
+                $background-color: color.invert($color);
+                @if $var == 10 {
+                    $background-color: blue;
+                    $color: red;
+                }
+                &:nth-child(#{$var}){
+                    color: $color;
+                    background-color: $background-color;
+                    }
+               }
+        }
+    }
+ }

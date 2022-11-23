@@ -1,0 +1,44 @@
+.container {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 10px;
+  padding: 10px;
+  border: 1px solid red;
+  gap: 1rem;
+}
+.container h1 {
+  display: flex;
+  justify-content: center;
+  color: green;
+  -webkit-text-decoration: underline 1px blue;
+          text-decoration: underline 1px blue;
+}
+.container section {
+  display: flex;
+  flex-direction: row;
+}
+.container section article {
+  border: 1px green solid;
+}
+.container section article p {
+  display: flex;
+  text-align: center;
+  font-size: 1.25rem;
+}
+.container section article:nth-child(odd) p {
+  color: blue;
+}
+.container section article:nth-child(even) p {
+  color: red;
+}
+.container section:last-child article {
+  border: 1px solid blue;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container section:last-child article p {
+  color: green;
+  font-size: 1.5625rem;
+}/*# sourceMappingURL=style.css.map */

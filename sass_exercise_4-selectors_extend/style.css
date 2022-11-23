@@ -1,0 +1,53 @@
+.container {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  padding-bottom: 20px;
+  gap: 1rem;
+}
+.container h1, .container h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: green;
+  -webkit-text-decoration: 1px underline blue;
+          text-decoration: 1px underline blue;
+}
+.container h2 {
+  align-self: center;
+  text-decoration: none;
+  border: 1px solid red;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+}
+.container section {
+  display: flex;
+  flex-direction: row;
+}
+.container section article {
+  border: 1px solid green;
+}
+.container section article p {
+  display: flex;
+  text-align: center;
+  font-size: 1rem;
+}
+.container section article:nth-child(odd) p {
+  color: blue;
+}
+.container section article:nth-child(even) p {
+  color: red;
+}
+.container section:last-child article {
+  border: 1px solid blue;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container section:last-child article p {
+  color: green;
+  font-size: 26px;
+}/*# sourceMappingURL=style.css.map */
