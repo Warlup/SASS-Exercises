@@ -17,7 +17,7 @@
   text-align: center;
 }
 .container section article {
-  color: green;
+  color: unset;
   border: 1px blue solid;
   font-size: unset;
 }
@@ -34,10 +34,10 @@
   color: red;
 }
 .container section:last-child article {
-  border: 1px solid blue;
-  width: 100%;
+  color: unset;
+  border: 1px blue solid;
+  font-size: 26px;
 }
 .container section:last-child article p {
   color: green;
-  font-size: 26px;
 }/*# sourceMappingURL=style.css.map */
