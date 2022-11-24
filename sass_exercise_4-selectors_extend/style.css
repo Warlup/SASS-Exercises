@@ -23,6 +23,7 @@
   width: -moz-fit-content;
   width: fit-content;
   align-self: center;
+  text-decoration: none;
 }
 .container section {
   display: flex;
