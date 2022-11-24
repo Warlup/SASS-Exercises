@@ -1,3 +1,12 @@
+.container h2, .container h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: green;
+  -webkit-text-decoration: 1px underline blue;
+          text-decoration: 1px underline blue;
+}
+
 .fs-1rem {
   font-size: 1rem;
 }
@@ -10,34 +19,23 @@
   font-size: 3rem;
 }
 
-.fs-4rem {
-  font-size: 4rem;
-}
-
 .container {
   border: 1px solid red;
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  padding-bottom: 20px;
+  margin: 0px 10px;
+  padding: 1rem;
+  border: 1px solid red;
   gap: 1rem;
 }
-.container h1, .container h2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: green;
-  -webkit-text-decoration: 1px underline blue;
-          text-decoration: 1px underline blue;
-}
 .container h2 {
-  align-self: center;
-  text-decoration: none;
-  border: 1px solid red;
+  border: 1px red solid;
+  padding: 1rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 10px;
+  align-self: center;
+  text-decoration: none;
 }
 .container section {
   display: flex;
@@ -45,7 +43,9 @@
   justify-content: space-between;
 }
 .container section article {
-  border: 1px solid green;
+  border: 1px green solid;
+  width: 100%;
+  display: flex;
 }
 .container section article p {
   display: flex;
@@ -57,16 +57,6 @@
 }
 .container section article:nth-child(even) p {
   color: red;
-}
-.container section:last-child article {
-  border: 1px solid blue;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.container section:last-child article p {
-  color: green;
-  font-size: 26px;
 }
 .container:nth-child(1) div {
   width: 2.8125rem;
