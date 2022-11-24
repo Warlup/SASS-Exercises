@@ -11,8 +11,8 @@
   display: flex;
   justify-content: center;
   color: green;
-  -webkit-text-decoration: underline 1px blue;
-          text-decoration: underline 1px blue;
+  -webkit-text-decoration: 1px underline blue;
+          text-decoration: 1px underline blue;
 }
 .container section {
   display: flex;
@@ -24,7 +24,7 @@
 .container section article p {
   display: flex;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 .container section article:nth-child(odd) p {
   color: blue;
@@ -40,5 +40,5 @@
 }
 .container section:last-child article p {
   color: green;
-  font-size: 1.5625rem;
+  font-size: 2rem;
 }/*# sourceMappingURL=style.css.map */

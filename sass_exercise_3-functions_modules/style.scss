@@ -1,56 +1,50 @@
-@function rem ($size) {
-    $font-size: ($size / 16) + rem;
-    @return $font-size;
-}
-
-$primary-color: blue;
-$secondary-color: red;
-$third-color: green;
+@use "function.scss" as f;
+@use "variables.scss" as v;
 
 .container{
-    border: 1px solid red;
+    border: 1px solid v.$secondary-color;
     display: flex;
     flex-direction: column;
     margin: 0px 10px;
     padding: 10px;
-    border: 1px solid $secondary-color;
+    border: 1px solid v.$secondary-color;
     gap: 1rem;
     h1 {
         display: flex;
         justify-content: center;
-        color: $third-color;
-        text-decoration: underline 1px $primary-color;
+        color: v.$third-color;
+        text-decoration: 1px underline v.$primary-color;
     }
     section {
         display: flex;
         flex-direction: row;
         article{
-            border: 1px $third-color solid;
+            border: 1px v.$third-color solid;
             p{
                 display: flex;
                 text-align: center;
-                font-size: rem(20);
+                font-size: f.rem(16);
             }
             &:nth-child(odd){
                 p{
-                    color: blue;
+                    color: v.$primary-color;
                 }
             }
             &:nth-child(even){
                 p{
-                    color: red;
+                    color: v.$secondary-color;
                 }
             }
         }
         &:last-child{
             article{
-                border: 1px solid blue;
+                border: 1px solid v.$primary-color;
                 width: 100%;
                 display: flex;
                 justify-content: center;
                 p{
                     color: green;
-                    font-size: rem(25);
+                    font-size: f.rem(32);
                 }
             }
         }
